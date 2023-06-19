@@ -58,6 +58,16 @@ section{
     color: var(--red);
 }
 
+.bottom-border{
+    padding-bottom: 50px;
+}
+
+@media(max-width:992px){
+    .bottom-border{
+        padding-bottom: 0;
+    }
+}
+
 /*---------------------------------------------- 
 Titles
 ------------------------------------------------*/
@@ -73,6 +83,7 @@ Titles
    text-transform: capitalize;
    color: var(--white); 
    border-bottom: dotted 2px solid var(--gray);
+   font-family: AvantGrade;
 }
 
 .section-description{
@@ -237,6 +248,7 @@ Hero Section
 .hero .sub-title{
     font-family: AvantGrade;
     font-weight: 700;
+    font-size: 21px;
 }
 
 .hero .banner-details{
@@ -341,15 +353,6 @@ Experience Section
     padding-top: 30px;
 }
 
-.experience-details{
-    display: flex;
-    justify-content: space-around;
-    display: -webkit-flex;
-    -webkit-justify-content: space-around;
-    -webkit-align-items: center;
-    flex-wrap: wrap;
-}
-
 .experience-details .experience-details-col:nth-child(1) .progress-bar {
     width: 100px;
     height: 100px;
@@ -398,6 +401,11 @@ Experience Section
     margin-top: 20px;
 }
 
+.education{
+    text-align: right;
+    padding-top: 20px;
+}
+
 
 @media(max-width:992px){
     .experience .number {
@@ -422,7 +430,25 @@ Experience Section
     .experience .education{
         position: relative;
         bottom: auto;
-        top: 30%;
+        top: 50%;
+        text-align: left;
+        padding-top: 0;
+    }
+}
+
+@media(max-width:768px){
+    .experience-details .experience-details-col{
+        margin-bottom: 20px;
+    }
+
+    .experience-details .experience-details-col .content{
+        display: flex;
+        align-items: center;
+    }
+
+    .progress-text{
+        margin-top: 0;
+        margin-left: 20px;
     }
 }
 
@@ -594,6 +620,9 @@ Blogs Section
     display: flex;
     justify-content: center;
     align-items: center;
+
+    overflow: hidden;
+
 }
 
 .blogs .card img{
@@ -601,6 +630,16 @@ Blogs Section
     width: 100%;
     height: 100%;
     object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.5s ease-in;
+}
+
+.blogs .card .img-container img:hover{
+    -ms-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
 }
 
 @media(max-width:992px){

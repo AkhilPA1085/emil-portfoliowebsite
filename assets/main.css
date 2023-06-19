@@ -151,14 +151,14 @@ Header Section
     margin: 0;
 }
 
-.navbar-brand:before,
+/* .navbar-brand:before,
 .navbar-brand:after{
     content: '';
     display: block;
     width: 30px;
     height: 4px;
     background-color: var(--red);
-}
+} */
 
 .logo span{
     color: var(--gray);

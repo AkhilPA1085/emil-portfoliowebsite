@@ -1,3 +1,13 @@
+// preloader
+$(window).on('load', function() { 
+  $('#preloader-overlay').css({"transform":"translateY(-100%)","height":$(window).height()});
+  $('#preloader-overlay').css({'height':$(window).height(),'transform': 'translateY(-100%)'});
+  $('#preloader').css({'height':$(window).height(),'transform': 'translateY(-100%)'});
+  $('#status').fadeOut(); 
+  $('#preloader').delay(350).fadeOut(1500);
+  $('body').delay(350).css({'overflow':'visible'});
+});
+
 $(document).ready(function() {
   // navbar
   var prevScrollpos = $(window).scrollTop();
@@ -50,4 +60,4 @@ $(document).ready(function() {
         $(".filter-item[data-filter='" + filter + "']").show();
       }
     }
-})
+});

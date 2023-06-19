@@ -723,3 +723,58 @@ footer .social-links-list{
 footer .social-links-list-item{
     margin-right: 20px;
 }
+
+/*--------------------------------------------------------------
+# Preloader
+--------------------------------------------------------------*/  
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--dark-ash);
+    z-index: 99999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    display: -webkit-flex;
+    -webkit-justify-content: center;
+    -webkit-align-items: center;
+    transform: translateY(0);
+    transition: transform 1s ease;
+}                                                                                 
+
+#status {
+    font-size: 36px;
+    font-weight: 700;
+    font-family: AvantGrade;
+    text-align: center;
+    color: var(--white);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    display: -webkit-flex;
+    -webkit-justify-content: center;
+    -webkit-align-items: center;
+}
+
+#preloader-overlay{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    /* background: rgba(255,255,255,0.75); */
+    transform: translateY(0%);
+    transition: transform 0.5s;
+    z-index: 2;
+}
+  
+#preloader img{
+    max-height: 120px;
+    height: 120px;
+    z-index: 1;
+}
+
